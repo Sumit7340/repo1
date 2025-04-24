@@ -1,0 +1,80 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #7b8793, #1c1f22); /* Smooth gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full screen height */
+    color: #333;
+    transition: background 0.3s ease; /* Smooth background change */
+}
+
+/* Centered container */
+.container {
+    text-align: center;
+    background-color: #9a9191; /* White background */
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transform and shadow change */
+}
+
+/* Container hover effect */
+.container:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+/* Heading styling */
+h1 {
+    font-size: 48px; /* Larger font size */
+    color: #b8c7d5; /* Dark blueish color */
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+    animation: fadeIn 1.5s ease-out; /* Fade-in effect */
+}
+
+/* Heading hover effect */
+h1:hover {
+    color: #3498db; /* Light blue on hover */
+    transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+/* Fade-in animation for heading */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px; /* Smaller font size for tablets and mobile devices */
+    }
+    .container {
+        padding: 20px; /* Reduced padding */
+        width: 90%; /* Make container take more width on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px; /* Even smaller font size for smaller devices */
+    }
+}
